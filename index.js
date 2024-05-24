@@ -75,10 +75,10 @@ function findEmployeeByFirstName(manyEmpArray, fName){
     return manyEmpArray.find(emp => emp.firstName === fName)
 }
 
-/* function calculatePayroll(employeesArray){
-    const totalWages = employeesArray.reduce(function(accumulator, element){
-        const empWages = allWagesFor.call(this, element)
-        return accumulator + empWages
+function calculatePayroll(manyEmpArray){
+    const totalWages = manyEmpArray.reduce(function(accumulator, element){
+        return accumulator + allWagesFor.call(element)
     }, 0)
+    return totalWages
 }
- */
+
